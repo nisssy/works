@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- サイトのベースの設定 -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- スタイルシートの読み込み -->
+<link rel="stylesheet" href="./css/main.css">
+<!-- Google Font -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Euphoria+Script&family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
+<!-- ページタイトル -->
+<title>Green Time</title>
+<!-- jQuery本体の読み込み -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<!-- Body -->
+<body>
+<!-- header -->
+<header class="l-Header">
+    <!-- nav -->
+    <nav class="c-Navbar">
+        <svg class="c-navbar__logo" width="20" height="20" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.756 20.244H5.706C5.747 20.501 5.96 20.702 6.229 20.702H12.936C13.206 20.702 13.418 20.502 13.459 20.244H16.409C16.908 20.244 17.312 19.84 17.312 19.341H1.854C1.854 19.84 2.258 20.244 2.756 20.244Z" fill="white"/><path d="M20.865 10.963C20.113 10.354 19.054 10.344 18.357 10.421C18.377 9.935 18.388 9.438 18.388 8.921H0C0 13.891 0.752 17.477 5.511 18.815H12.877C14.762 18.286 16.012 17.397 16.841 16.215C18.647 16.18 21.552 15.469 21.661 12.975C21.708 11.883 21.254 11.277 20.865 10.963ZM17.598 14.789C17.944 13.9 18.149 12.9 18.262 11.801C18.75 11.721 19.591 11.67 20.016 12.016C20.094 12.08 20.337 12.278 20.309 12.917C20.252 14.209 18.648 14.643 17.598 14.789Z" fill="white"/><path d="M7.49099 8.223C7.49099 8.223 10.991 7.966 9.38699 5.015C8.09899 2.646 8.39299 1.256 10.041 0C10.041 0 4.64299 1.375 7.79099 5.63C8.94599 7.484 7.49099 8.223 7.49099 8.223Z" fill="white"/><path d="M9.84998 7.987C9.84998 7.987 12.654 7.396 11.128 5.141C10.574 4.163 11.338 3.814 11.338 3.814C11.338 3.814 9.53298 3.871 10.295 5.422C10.905 6.669 10.724 7.377 9.84998 7.987Z" fill="white"/></svg>            
+        <h1 class="c-navbar__pagetitle">Green Time</h1>
+        <a class="c-navbar__takeout" href="#Takeout"><span>Takeout</span></a>
+        <!-- menu -->
+        <button id="BtnToggle-Nav" class="c-navbar__togglebutton c-ToggleButton">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" height="34" width="34"><g class="nc-icon-wrapper js-transition-icon" data-effect="scale" data-event="click"><g class="js-transition-icon__state" transform="translate(0 0) scale(1)" style="display: block;"><defs><style>.cls-1,.cls-2{fill:none;}.cls-2{stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:4px;}</style></defs><title>bars_24</title><g id="レイヤー_2" data-name="レイヤー 2"><g id="Rect_最後透明に_" data-name="Rect（最後透明に）"><rect class="cls-1" width="48" height="48"/></g><g id="icon"><line class="cls-2" x1="10" y1="12" x2="38" y2="12"/><line class="cls-2" x1="10" y1="24" x2="38" y2="24"/><line class="cls-2" x1="10" y1="36" x2="38" y2="36"/></g></g></g><g class="js-transition-icon__state" style="display: none;" transform="translate(4.799999999999999 4.799999999999999) scale(0.80)" aria-hidden="true"><defs><style>.cls-1,.cls-2{fill:none;}.cls-2{stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:4px;}</style></defs><title>cross_24</title><g id="レイヤー_2" data-name="レイヤー 2"><g id="Rect_最後透明に_" data-name="Rect（最後透明に）"><rect class="cls-1" width="48" height="48"/></g><g id="icon"><line class="cls-2" x1="12.13" y1="12.63" x2="36.13" y2="36.13"/><line class="cls-2" x1="12.38" y1="36.38" x2="35.88" y2="12.38"/></g></g></g></g><style>svg{cursor: pointer;}</style><script>!function(){"use strict";if(!window.requestAnimationFrame){var a=null;window.requestAnimationFrame=function(t,i){var e=(new Date).getTime();a||(a=e);var s=Math.max(0,16-(e-a)),n=window.setTimeout(function(){t(e+s)},s);return a=e+s,n}}function r(t,i,e,s){return 1&gt;(t/=s/2)?e/2*t*t*t*t+i:-e/2*((t-=2)*t*t*t-2)+i}function e(t){return t?[1,0]:[0,1]}function t(t){this.element=t,this.svg=function t(i){var e=i.parentNode;if("svg"!==e.tagName)e=t(e);return e;}(this.element),this.getSize(),this.states=this.element.querySelectorAll(".js-transition-icon__state"),this.time={start:null,total:200},this.status={interacted:!1,animating:!1},this.animation={effect:this.element.getAttribute("data-effect"),event:this.element.getAttribute("data-event")},this.init()}t.prototype.getSize=function(){var t=this.svg.getAttribute("viewBox");this.size=t?{width:t.split(" ")[2],height:t.split(" ")[3]}:this.svg.getBoundingClientRect()},t.prototype.init=function(){var t=this;this.svg.addEventListener(t.animation.event,function(){t.status.animating||(t.status.animating=!0,window.requestAnimationFrame(t.triggerAnimation.bind(t)))})},t.prototype.triggerAnimation=function(t){var i=this.getProgress(t);this.animateIcon(i),this.checkProgress(i)},t.prototype.getProgress=function(t){return this.time.start||(this.time.start=t),t-this.time.start},t.prototype.checkProgress=function(t){if(this.time.total&gt;t)window.requestAnimationFrame(this.triggerAnimation.bind(this));else{this.status={interacted:!this.status.interacted,animating:!1},this.time.start=null;var i=e(this.status.interacted);this.states[i[0]].removeAttribute("aria-hidden"),this.states[i[1]].setAttribute("aria-hidden","true")}},t.prototype.animateIcon=function(t){if(t&gt;this.time.total){t=this.time.total;}if(0&gt;t){t=0;};var i=e(this.status.interacted);this.states[i[0]].style.display=t&gt;this.time.total/2?"none":"block",this.states[i[1]].style.display=t&gt;this.time.total/2?"block":"none","scale"==this.animation.effect?this.scaleIcon(t,i[0],i[1]):this.rotateIcon(t,i[0],i[1])},t.prototype.scaleIcon=function(t,i,e){var s=r(Math.min(t,this.time.total/2),1,-.2,this.time.total/2).toFixed(2),n=r(Math.max(t-this.time.total/2,0),.2,-.2,this.time.total/2).toFixed(2);this.states[i].setAttribute("transform","translate("+this.size.width*(1-s)/2+" "+this.size.height*(1-s)/2+") scale("+s+")"),this.states[e].setAttribute("transform","translate("+this.size.width*n/2+" "+this.size.height*n/2+") scale("+(1-n)+")")},t.prototype.rotateIcon=function(t,i,e){var s=r(t,0,180,this.time.total).toFixed(2);this.states[i].setAttribute("transform","rotate(-"+s+" "+this.size.width/2+" "+this.size.height/2+")"),this.states[e].setAttribute("transform","rotate("+(180-s)+" "+this.size.width/2+" "+this.size.height/2+")")};var i=document.querySelectorAll(".js-transition-icon");if(i)for(var s=0;i.length&gt;s;s++)new t(i[s])}();</script></svg>
+        </button>
+        <ul class="c-navbar__list">
+            <li class="c-navbar__list-item"><a href="#Top">Top</a></li>
+            <li class="c-navbar__list-item"><a href="#Service">Service</a></li>
+            <li class="c-navbar__list-item"><a class="c-navbar__takeout-pc" href="#Takeout">Takeout</a></li>
+            <li class="c-navbar__list-item"><a href="#Access">Access</a></li>
+            <li class="c-navbar__list-item"><a href="#Contact">Contact</a></li>
+        </ul>
+        <!-- menu end -->
+    </nav>
+    <!--  -->
+</header>
+<!-- header end -->
+<main>
+<!-- Top -->
+<section id="Top" class="p-Top">
+    <div class="c-Container">
+    <div class="p-top__banner p-Banner">
+    <div class="p-banner__inner">
+        <p class="p-top__pagetitle p-Pagetitle">Green Time</p>
+        <p class="p-top__text u-1 c-Text c-Text--small">場所に縛られない癒しのひと時</p>
+    </div>
+    </div>
+    <p class="p-top__text u-2 c-Text c-Text--small">好きなものを好きなときに楽しむ</p>
+    <p class="p-top__text u-3 c-Text c-Text--small">毎日をもっと自由に</p>
+    </div>
+</section>
+<!--  Top end -->
+<!-- Service -->
+<section id="Service" class="p-Service">
+    <h2 class="p-service__title c-Title">Service</h2>
+    <p class="p-service__subtitle c-SubTitle">場所に縛られない癒しのひと時</p>
+    <div class="p-service__tab c-Tab">
+    <div class="c-tab__cover"></div>
+        <div id="Park" class="c-tab__slide u-1">
+            <p class="c-tab__title">自然のなかでカフェ</p>
+            <p class="c-tab__text">公園や海辺。どこでもカフェに早変わり。<br>通常の3倍の濃さで入れた抹茶は、淹れてから4時間経っても香りが落ちません。</p>
+            <img src="img/slide1-1.jpg" alt="" class="c-tab__img u-1">
+            <img src="img/slide1-2.jpg" alt="" class="c-tab__img u-2">
+        </div>
+        <div id="Home" class="c-tab__slide u-2">
+            <p class="c-tab__title">おうちカフェ</p>
+            <p class="c-tab__text">ゆっくり自分だけの時間を楽しむ。<br>部屋全体に香りが広がりリラックス効果が期待できます。</p>
+            <img src="img/slide2-1.jpg" alt="" class="c-tab__img u-1">
+            <img src="img/slide2-2.jpg" alt="" class="c-tab__img u-2">
+        </div>
+        <div id="Cafe" class="c-tab__slide u-3">
+            <p class="c-tab__title">お店で楽しむ</p>
+            <p class="c-tab__text">店舗ではできたての抹茶を楽しめます。<br>内装までこだわった癒しの空間でゆっくり抹茶をお楽しみください。</p>
+            <img src="img/slide3-1.jpg" alt="" class="c-tab__img u-1">
+            <img src="img/slide3-2.jpg" alt="" class="c-tab__img u-2">
+        </div>
+    </div>
+    <div class="c-tab__buttons">
+        <a href="#Park" class="c-tab__button">Park</a>
+        <a href="#Home" class="c-tab__button">Home</a>
+        <a href="#Cafe" class="c-tab__button">Cafe</a>
+    </div>
+</section>
+<!-- Service end -->
+<!-- Purchase -->
+<section id="Takeout" class="p-Purchase">
+    <h2 class="p-purchase__title c-Title">Purchase</h2>
+    <p class="p-purchase__subtitle c-SubTitle">ご購入方法</p>
+    <a href="" class="p-purchase__bar u-left c-Bar">
+        <div class="c-bar__inner">
+            <div class="c-bar__title u-fontsize-30">Takeout</div>
+            <div class="c-bar__subtitle">専用サイトへ</div>
+            <svg class="c-bar__img u-1" width="70" height="72" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0)"><path d="M491.129 358.548C491.036 353.083 486.578 348.717 481.133 348.717C481.076 348.717 481.019 348.717 480.961 348.718C475.44 348.812 471.038 353.364 471.131 358.886C471.221 364.209 471.265 369.143 471.265 373.97V428.571C471.265 437.906 463.666 445.501 454.326 445.501H320.736C322.46 441.433 323.349 436.983 323.349 432.567C323.349 427.679 322.285 423.034 320.377 418.853C335.833 415.95 347.367 401.984 347.367 386.279C347.367 370.576 335.83 356.624 320.389 353.706C322.339 349.424 323.348 344.694 323.348 339.99C323.348 321.714 308.48 306.845 290.203 306.845L159.736 306.839L176.954 289.621C190.776 275.799 190.773 252.717 176.954 238.898C168.881 230.825 157.186 226.951 145.901 228.781C146.737 222.046 147.613 215.383 148.515 208.792L238.922 169.642H371.761L458.76 208.706C461.557 229.141 464.071 250.342 466.1 271.896C466.618 277.394 471.492 281.43 476.994 280.915C482.492 280.397 486.53 275.52 486.013 270.021C476.792 172.082 457.708 81.375 447.154 36.027C442.228 14.814 423.566 0 401.775 0H205.515C183.731 0 165.066 14.813 160.125 36.023C150.996 75.259 134.318 153.612 124.326 240.81L61.2521 303.884H30.7351C25.2131 303.884 20.7351 308.362 20.7351 313.884V474.149C20.7351 479.671 25.2131 484.149 30.7351 484.149H56.5231L91.1841 502.248C103.402 508.628 117.146 512 130.93 512H264.406C282.682 512 297.551 497.132 297.551 478.855C297.551 474.106 296.544 469.588 294.738 465.5H454.325C474.693 465.5 491.264 448.934 491.264 428.57V373.97C491.265 369.029 491.22 363.985 491.129 358.548V358.548ZM179.604 40.559C182.424 28.454 193.078 20 205.515 20H401.776C414.214 20 424.864 28.452 427.676 40.557C434.888 71.546 446.124 123.935 455.387 185.268L378.001 150.52C376.713 149.942 375.317 149.643 373.905 149.643H236.853C235.486 149.643 234.133 149.923 232.879 150.466L151.863 185.549C161.246 123.389 172.644 70.476 179.604 40.559V40.559ZM264.406 492H130.931C120.358 492 109.815 489.413 100.443 484.52L63.6071 465.286C62.1781 464.54 60.5901 464.15 58.9781 464.15H40.7351V323.885H65.3941C68.0461 323.885 70.5891 322.831 72.4651 320.956L140.377 253.044C146.484 246.937 156.708 246.939 162.812 253.044C168.918 259.15 168.917 269.374 162.812 275.479L145.591 292.7C139.972 298.32 138.213 306.922 141.174 314.295C144.194 321.816 151.631 326.849 159.735 326.849H290.205C297.45 326.849 303.345 332.744 303.345 339.99C303.345 347.24 297.296 353.067 290.128 353.134H185.284C179.762 353.134 175.284 357.612 175.284 363.134C175.284 368.656 179.762 373.134 185.284 373.134H314.223C321.364 373.134 327.365 379.139 327.365 386.28C327.365 393.428 321.371 399.42 314.224 399.42L185.284 399.423C179.762 399.423 175.284 403.901 175.284 409.423C175.284 414.945 179.762 419.423 185.284 419.423H290.205C297.366 419.423 303.345 425.418 303.345 432.57C303.345 439.712 297.351 445.711 290.205 445.711H185.284C179.762 445.711 175.284 450.189 175.284 455.711C175.284 461.233 179.762 465.711 185.284 465.711H264.406C271.654 465.711 277.551 471.607 277.551 478.856C277.551 486.105 271.654 492 264.406 492V492Z" fill="white"/><path d="M264.084 121.875H346.674C367.203 121.875 383.905 105.173 383.905 84.644V83.784C383.905 63.255 367.203 46.553 346.674 46.553H264.084C243.555 46.553 226.853 63.255 226.853 83.784V84.644C226.853 105.173 243.555 121.875 264.084 121.875V121.875ZM246.853 83.783C246.853 74.282 254.583 66.552 264.084 66.552H346.674C356.175 66.552 363.905 74.282 363.905 83.783V84.643C363.905 94.144 356.175 101.874 346.674 101.874H264.084C254.583 101.874 246.853 94.144 246.853 84.643V83.783Z" fill="white"/><path d="M483.25 305.27C478.203 303.203 472.284 305.632 470.189 310.68C468.102 315.709 470.566 321.662 475.599 323.741C480.636 325.821 486.563 323.362 488.649 318.331C490.738 313.293 488.28 307.367 483.25 305.27V305.27Z" fill="white"/></g><defs><clipPath id="clip0"><rect width="512" height="512" fill="white"/></clipPath></defs>
+            </svg>                
+        </div>
+    </a>
+    <a class="p-purchase__bar u-right c-Bar c-Bar--white"  href="https://www.ubereats.com/jp?utm_campaign=eats-sticky-banner&utm_medium=referral&utm_source=uberblog" target="_blank" rel="noopener noreferrer">
+        <div class="c-bar__inner">
+            <div class="c-bar__title u-fontsize-30">Uber Eats</div>
+                <svg class="c-bar__img u-2" width="60" height="60" viewBox="0 0 512 484" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M484.827 143.974H398.002C383.019 143.974 370.829 156.17 370.829 171.162V271.096H338.353C340.158 264.535 340.827 256.796 340.388 247.79V247.789C339.683 209.73 332.777 177.654 319.86 152.452C309.83 132.885 298.125 121.154 288.081 114.141C299.87 102.02 306.686 84.777 306.686 64.89C306.686 29.109 278.143 0 243.06 0C207.977 0 179.434 29.109 179.434 64.89C179.434 69.033 182.792 72.39 186.934 72.39H192.03C191.561 75.22 191.311 78.104 191.311 81.033C191.311 106.249 209.329 127.324 233.151 132.047C230.654 141.319 229.413 152.252 229.418 164.672L210.712 180.761L165.197 184.442L112.694 167.086C107.882 165.486 102.428 163.678 97.696 167.09C93.033 170.455 93.033 176.346 93.033 178.281V217.316C93.033 221.459 96.391 224.816 100.533 224.816H109.462L95.767 272.14C94.616 276.118 96.908 280.278 100.887 281.429C104.868 282.586 109.025 280.288 110.177 276.31L125.079 224.816H146.401C119.881 305.688 135.013 359.67 158.272 414.301H144.79L88.637 351.515L100.511 310.495C101.663 306.516 99.371 302.357 95.392 301.206C91.413 300.055 87.254 302.347 86.102 306.325L74.745 345.562C39.619 344.976 8.19901 369.194 0.192011 404.037C-0.734989 408.073 1.78401 412.097 5.81901 413.025L16.466 415.475C13.746 443.727 32.351 470.382 60.725 476.913C65.034 477.906 69.38 478.396 73.696 478.396C84.34 478.396 94.797 475.412 104.046 469.615C114.901 462.813 122.989 452.813 127.366 440.995L135.767 442.928C138.27 443.507 140.644 443.8 143.016 442.523C145.223 441.335 146.69 439.19 147.24 436.769C147.768 434.314 148.17 431.819 148.449 429.301H305.307C310.323 460.488 336.858 483.997 368.549 483.997C400.24 483.997 426.776 460.488 431.792 429.301H437.516C437.516 429.301 438.652 429.314 438.911 429.314C441.056 429.314 444.154 429.076 446.698 426.488C447.971 425.193 449.465 422.876 449.35 419.195C449.139 412.152 448.082 405.347 446.278 398.879C452.252 362.611 446.504 340.522 437.983 323.235C443.37 319.704 446.942 313.62 446.942 306.708V286.095H484.825C499.808 286.095 511.998 273.899 511.998 258.907V171.161C512 156.17 499.811 143.974 484.827 143.974V143.974ZM96.081 456.907C86.48 462.924 75.12 464.837 64.092 462.298H64.091C43.793 457.626 30.251 439.013 31.238 418.887L112.591 437.611C109.225 445.536 103.53 452.239 96.081 456.907V456.907ZM133.609 427.041L16.944 400.195C25.947 375.541 50.175 359.221 76.658 360.625L133.809 424.526C133.759 425.369 133.693 426.207 133.609 427.041ZM246.894 296.346C244.717 302.088 244.717 309.167 244.717 318.966V347.268H217.254V308.44C217.254 264.542 241.212 256.719 251.964 255.428H325.493C325.197 265.391 322.949 272.473 318.681 276.968C313.707 282.206 305.196 284.758 292.66 284.77L265.739 284.798C256.139 284.799 249.799 288.683 246.894 296.346V296.346ZM244.717 362.267V380.175C244.649 380.175 244.579 380.175 244.507 380.175H191.234C191.833 374.621 193.563 370.323 196.404 367.349C200.63 362.927 206.582 362.267 209.754 362.267H244.717ZM325.162 240.429H256.955C254.216 231.81 251.774 222.372 249.766 212.672L270.503 199.212C281.823 191.861 287.712 181.474 286.66 170.713C285.728 161.174 279.243 152.653 270.139 149.006C261.825 145.676 252.876 146.722 244.967 151.779C245.619 144.605 246.833 138.201 248.589 132.765C251.786 132.435 254.961 131.81 258.079 130.893C264.426 129.419 270.291 127.07 275.586 123.955C290.031 132.585 321.801 160.577 325.162 240.429V240.429ZM194.983 57.391C198.52 33.427 218.732 15.001 243.06 15.001C269.872 15.001 291.686 37.382 291.686 64.891C291.686 87.265 280.957 105.298 263.657 113.234V73.771C263.657 66.938 261.042 58.556 248.588 57.422C248.362 57.401 248.135 57.391 247.908 57.391H194.983ZM206.312 81.034C206.312 78.074 206.649 75.183 207.312 72.391H247.54C248.003 72.441 248.341 72.495 248.583 72.544C248.622 72.822 248.656 73.222 248.656 73.771V117.647C246.869 117.91 245.071 118.043 243.274 118.044C243.257 118.044 243.24 118.044 243.224 118.044C222.868 118.025 206.312 101.43 206.312 81.034ZM196.589 196.954L214.353 195.517C215.936 195.39 217.437 194.763 218.642 193.728L250.702 166.153L250.707 166.148C253.807 163.477 257.116 162.107 260.338 162.107C261.772 162.107 263.189 162.379 264.562 162.929C268.525 164.516 271.339 168.144 271.733 172.17C272.228 177.237 268.89 182.373 262.337 186.629L226.612 209.817H196.591V196.954H196.589ZM164.893 199.518L181.589 198.168V209.819H162.188C159.673 209.819 159.06 207.729 158.988 205.976C158.947 204.982 159.041 199.998 164.893 199.518V199.518ZM147.142 194.34C144.883 198.044 143.828 202.377 144.001 206.59C144.046 207.681 144.185 208.732 144.379 209.756C144.379 209.777 144.367 209.798 144.371 209.818H108.035V181.345L147.171 194.282C147.159 194.302 147.153 194.321 147.142 194.34V194.34ZM162.23 224.818H228.831C230.28 224.818 231.699 224.398 232.914 223.609L236.309 221.405C237.942 228.623 239.802 235.647 241.828 242.281C226.532 246.796 202.253 261.387 202.253 308.439V348.02C196.991 349.082 190.766 351.536 185.559 356.985C180.07 362.729 176.935 370.512 176.183 380.174H161.053C145.807 336.236 140.009 289.48 162.23 224.818V224.818ZM174.592 414.276C171.82 407.901 169.148 401.55 166.632 395.175H244.506C254.599 395.175 259.716 390.58 259.716 381.519V354.767V326.465H318.915C323.058 326.465 326.415 323.108 326.415 318.965C326.415 314.822 323.058 311.465 318.915 311.465H259.77C259.866 307.205 260.139 303.721 260.92 301.663C261.299 300.662 261.627 299.798 265.746 299.798L292.674 299.77C309.539 299.754 321.604 295.674 329.559 287.296C329.927 286.908 330.275 286.501 330.624 286.096H378.33H431.945V306.709C431.945 309.287 429.772 311.465 427.2 311.465H352.535C348.392 311.465 345.035 314.822 345.035 318.965C345.035 323.108 348.392 326.465 352.535 326.465H422.793C428.721 337.468 434.053 351.159 433.736 372.79C418.898 352.179 394.877 338.926 367.615 338.926C345.721 338.926 325.177 347.514 309.766 363.109C296.091 376.946 287.878 394.905 286.188 414.301L174.592 414.276ZM368.55 468.999C345.104 468.999 325.33 452.106 320.546 429.303H416.554C411.769 452.104 391.995 468.999 368.55 468.999V468.999ZM425.074 414.303H312.028H301.253C304.935 380.39 333.291 353.926 367.615 353.926C397.75 353.926 423.057 373.797 431.438 401.614C431.465 401.702 431.492 401.79 431.522 401.877C432.707 405.868 433.544 410.022 433.997 414.303H425.074ZM497 258.908C497 265.629 491.539 271.096 484.827 271.096H385.829V232.365H497V258.908ZM497 217.365H385.829V201.414H497V217.365ZM497 186.414H385.829V171.162C385.829 164.441 391.29 158.974 398.002 158.974H484.827C491.539 158.974 497 164.442 497 171.162V186.414Z" fill="#002C21"/>
+                </svg>
+            <!-- ここにウーバーのリンクを -->
+        </div>
+    </a>
+</section>
+<!-- Purchase end -->
+<!-- Identity -->
+<section class="p-Identity">
+    <h2 class="p-identity__title c-Title">Identity</h2>
+    <p class="p-identity__subtitle c-SubTitle">私たちのこだわり</p>
+    <div>
+    <div class="p-identity__card u-1 c-Card c-Card--bgi">
+        <div class="c-card__inner c-card__inner--black">
+            <h3 class="c-card__title">理念</h3>
+            <p class="c-card__text">“毎日をもっと自由に楽しく”<br>やすらぎと癒し、そして自分らしさを取り戻す体験を提供します。</p>
+        </div>
+    </div>
+    <div class="p-identity__card u-2 c-Card c-Card--bgi">
+        <div class="c-card__inner">
+            <h3 class="c-card__title">コンセプト</h3>
+            <p class="c-card__text">甘くて美味しい<br>からだにも優しいお茶<br>がんばる自分に感謝を込めて<br>心遊ばせる特別な時間</p>
+        </div>
+    </div>
+    <div class="p-identity__card u-3 c-Card c-Card--bgi">
+        <div class="c-card__inner">
+            <h3 class="c-card__title">こだわり</h3>
+            <p class="c-card__text">日本各地の厳選した良質な素材を使用しています。<br>お手頃なのに、素材はそれぞれ一級品。<br>本物だから出せる抹茶本来の味の深みをお楽しみください。</p>
+        </div>
+    </div>
+    </div>
+</section>
+<!-- Identity end -->
+<!-- Access -->
+<section id="Access" class="p-Access">
+<div class="p-access__inner">
+    <h2 class="p-access__title c-Title">Access</h2>
+    <p class="p-access__subtitle c-SubTitle">店舗</p>
+    <div class="p-access__flex-conteiner">
+    <div class="p-access__top u-bgc-black u-color-white u-border-white">
+        <div class="c-Grid">
+        <div class="c-Row">
+        <dl class="p-access__list u-1 c-List">
+            <dt class="p-access-list__title c-list__title">関東</dt>
+            <dd class="p-access-list__list-item c-list__list-item">新宿</dd>
+            <hr>
+            <dd class="p-access-list__list-item c-list__list-item">渋谷</dd>
+            <hr>
+            <dd class="p-access-list__list-item c-list__list-item">原宿</dd>
+            <hr>
+            <dd class="p-access-list__list-item c-list__list-item">青山一丁目</dd>
+        </dl>
+        <dl class="p-access__list u-2 c-List">    
+            <dt class="p-access-list__title c-list__title">関西</dt>
+            <dd class="p-access-list__list-item c-list__list-item">梅田</dd>
+            <hr>
+            <dd class="p-access-list__list-item c-list__list-item">八丁堀</dd>
+        </dl>
+        </div>
+        </div>
+    </div>
+    <div class="p-access__map c-Map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12965.388749479574!2d139.70023753387775!3d35.66845231553996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ca2e4535de5%3A0x4819c8b806e23295!2z44CSMTUwLTAwMDEg5p2x5Lqs6YO95riL6LC35Yy656We5a6u5YmNIOWOn-Wuvw!5e0!3m2!1sja!2sjp!4v1609295901460!5m2!1sja!2sjp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+    </div>
+</div>
+</section>
+<!-- Access end -->
+<!-- Contact -->
+<section id="Contact" class="p-Contact">
+    <div class="p-contact__title c-Title">Contact</div>
+    <div class="p-contact__subtitle c-SubTitle">連絡はこちらまで</div>
+    <p class="p-contact__text"><span><svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0)"><path d="M22.374 16.8797L19.1643 13.67C18.018 12.5236 16.0692 12.9822 15.6107 14.4724C15.2668 15.5041 14.1205 16.0773 13.0888 15.848C10.7961 15.2748 7.70102 12.2944 7.12786 9.88708C6.78396 8.85534 7.47176 7.70901 8.50345 7.36516C9.99368 6.90663 10.4522 4.95787 9.30588 3.81154L6.09616 0.601822C5.1791 -0.200607 3.80351 -0.200607 3.00108 0.601822L0.823054 2.77985C-1.35497 5.0725 1.05232 11.148 6.44006 16.5358C11.8278 21.9235 17.9033 24.4455 20.196 22.1528L22.374 19.9748C23.1765 19.0577 23.1765 17.6821 22.374 16.8797Z" fill="black"/></g><defs><clipPath id="clip0"><rect width="23" height="23" fill="white"/></clipPath></defs></svg></span>123-456-7899</p>
+</section>
+</main>
+<!-- Contact end -->
+<footer class="l-Footer c-Footer">
+    <ul class="c-footer__list">
+        <li class="c-footer__list-item"><a href="#Top">Top</a></li>
+        <li class="c-footer__list-item"><a href="#Service">Service</a></li>
+        <li class="c-footer__list-item"><a href="#Takeout">Takeout</a></li>
+        <li class="c-footer__list-item"><a href="#Access">Access</a></li>
+        <li class="c-footer__list-item"><a href="#Contact">Contact</a></li>
+    </ul>
+    <div class="c-footer__icons">
+        <svg class="c-footer__facebook" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M40 20C40 8.95313 31.0469 0 20 0C8.95313 0 0 8.95313 0 20C0 31.0469 8.95313 40 20 40C20.1172 40 20.2344 40 20.3516 39.9922V24.4297H16.0547V19.4219H20.3516V15.7344C20.3516 11.4609 22.9609 9.13281 26.7734 9.13281C28.6016 9.13281 30.1719 9.26563 30.625 9.32813V13.7969H28C25.9297 13.7969 25.5234 14.7812 25.5234 16.2266V19.4141H30.4844L29.8359 24.4219H25.5234V39.2266C33.8828 36.8281 40 29.1328 40 20V20Z" fill="white"/></svg>
+        <svg class="c-footer__instagram" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.5156 20C23.5156 21.9415 21.9415 23.5156 20 23.5156C18.0585 23.5156 16.4844 21.9415 16.4844 20C16.4844 18.0585 18.0585 16.4844 20 16.4844C21.9415 16.4844 23.5156 18.0585 23.5156 20Z" fill="white"/><path d="M25.9375 9.375H14.0625C11.4777 9.375 9.375 11.4777 9.375 14.0625V25.9375C9.375 28.5223 11.4777 30.625 14.0625 30.625H25.9375C28.5223 30.625 30.625 28.5223 30.625 25.9375V14.0625C30.625 11.4777 28.5223 9.375 25.9375 9.375ZM20 25.8594C16.7691 25.8594 14.1406 23.2309 14.1406 20C14.1406 16.7691 16.7691 14.1406 20 14.1406C23.2309 14.1406 25.8594 16.7691 25.8594 20C25.8594 23.2309 23.2309 25.8594 20 25.8594ZM26.7188 14.4531C26.0715 14.4531 25.5469 13.9285 25.5469 13.2812C25.5469 12.634 26.0715 12.1094 26.7188 12.1094C27.366 12.1094 27.8906 12.634 27.8906 13.2812C27.8906 13.9285 27.366 14.4531 26.7188 14.4531Z" fill="white"/><path d="M29.4531 0H10.5469C4.73145 0 0 4.73145 0 10.5469V29.4531C0 35.2686 4.73145 40 10.5469 40H29.4531C35.2686 40 40 35.2686 40 29.4531V10.5469C40 4.73145 35.2686 0 29.4531 0ZM32.9688 25.9375C32.9688 29.8145 29.8145 32.9688 25.9375 32.9688H14.0625C10.1855 32.9688 7.03125 29.8145 7.03125 25.9375V14.0625C7.03125 10.1855 10.1855 7.03125 14.0625 7.03125H25.9375C29.8145 7.03125 32.9688 10.1855 32.9688 14.0625V25.9375Z" fill="white"/></svg>
+    </div>
+    <p class="c-footer__copyright c-Copyright"><span>© 2020 KAZUHIRO NISHIKAWA</span><br>ALL RIGHTS RESERVED<br>MADE TO THRIVE</p>
+</footer>
+<!--  end -->
+<!-- javascript -->
+<script src="js/script.js"></script>
+</body>
+</html>
